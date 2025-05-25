@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Upload file</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        font-family: Century Gothic;
+        
+        }
+        .row{
+          margin-top: 5%;
+          display: flex;
+          justify-content: space-between;
+        }
+        header{
+                background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(../static/soybean.png);
+                height: 100vh;
+                background-size: cover;
+                background-position: center;
+                }
+        .heading{
+            position: relative; left: -5%;
+        }    
+        ul{
+          font-size: 20px;
+        float: left;
+        list-style-type: none;
+        color: #000;
+        }
+        ul li{
+          display: inline-block;
+          margin-top: 28px;
+         
+        color: #000;
+        }
+        ul li a{
+        text-decoration: none;
+        color: #000;
+        padding: 5px 20px;
+        border: 1px solid transparent;
+        transition: 0.6s ease;
+        }
+        ul li a:hover{
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        }
+        ul li.active a{
+        background-color: #fff;
+        color: #000;
+        }
+        .sub-menu-1{
+          display: none;
+        }
+        .logo img{
+        float: left;
+        width: 125px;
+        height: auto;
+        margin-top: -12px;
+        margin-left: 20px;
+        }
+        .main{
+        position: fixed;
+        transition: 0.3s;
+        width: 100%;
+        height: 140px;
+        font-weight: bold;
+        text-align: center; 
+        background: rgb(234, 231, 231);
+        color: rgb(35, 35, 35);
+        padding: 20px;
+        max-width: 1520px;
+        margin: auto;
+        z-index: 99;
+        }
+        .title{
+          position: absolute;
+        transition: 0.3s;
+          top: 60%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          text-align: center;
+        padding-top: 80px;
+        padding-bottom: 50px;
+            white-space: nowrap;
+        }
+        .wrap {
+          max-width: 350px;
+          border-radius: 20px;
+          margin:auto;
+          background: rgba(63, 62, 63, 0.8);
+          box-sizing: border-box;
+          padding: 40px;
+          color: #fff;
+          margin-top: -400px;
+        }
+        h2 {
+          text-align: center;
+        }
+        input[type=text] ,input[type=password] {
+          width:100%;
+          box-sizing: border-box;
+          padding: 12px 5px;
+          background: rgba(236, 228, 228, 0.932);
+          outline: none;
+          border: none;
+          border-bottom: 1px dotted rgba(15, 13, 13, 0.158);
+          color: rgb(20, 18, 18);
+          border-radius: 5px;
+          margin: 5px;
+          font-weight: bold;
+        }
+        input[type=submit] {
+          width: 100%;
+          box-sizing: border-box;
+          padding: 10px 0;
+          margin-top: 30px;
+          outline: none;
+          border: none;
+          background: rgb(141, 122, 122);
+          opacity: 0.7;
+          border-radius: 20px;
+          font-size: 20px;
+          color: rgb(22, 19, 19);
+        }
+        input[type=submit]:hover{
+          background: rgba(236, 228, 228, 0.932);
+          opacity: 0.7;
+        }
+      </style>
+      <body style="background-color:#c5bdbd">
+      <header>
+        <div class="main">
+          <div class="logo">
+            <img src="/static/logo1.png" alt="vbit Logo" width="110" height="110">
+          </div>
+          <div>
+            <h1>
+             VIGNANA BHARATHI INSTITUTE OF TECHNOLOGY
+            </h1>
+            <h4>(A UGC Autonomous Institution Approved by AICTE, Affiliated to JNTUH,Accredited by NBA & NAAC )<br>
+              Aushapur(v),Ghatkesar(M),Medchal(D) Telangana-501301
+            </h4>
+          </div>
+           <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'uploadfile' %}">Upload File</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'details' %}">Details</a></li>
+            
+           </ul>
+       </div>
+           
+    </header>
+      <link rel = "icon" href =  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYbaXPEuT4YK-ehTp22CdtVn_jpuMzQblscA&usqp=CA"type = "image/x-icon" sizes="16*16"> 
+</head>
+<body>
+  <div class="wrap">
+<div id="login-box">
+<form action="/result/" method="POST"  enctype="multipart/form-data">
+  {% csrf_token %}
+    <h1>Upload file</h1>
+    <input type="file" id="myFile" name="filename">
+  <input type="submit">
+</form>
+</div>
+</div>
+</body>
+</html>

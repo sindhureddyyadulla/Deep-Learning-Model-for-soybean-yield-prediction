@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Soybean Yield Prediction details</title>
+  <style>
+    *{
+margin: 0;
+padding: 0;
+font-family: Century Gothic;
+}
+header{
+        height: 30vh;
+        background-size: cover;
+        background-position: center;
+        }
+.heading{
+    position: relative; left: -5%;
+}    
+
+
+.menu1 ul{
+  font-size: 20px;
+float: left;
+list-style-type: none;
+color: rgb(234, 231, 231);
+}
+.menu1 ul li{
+  background-color: rgb(234, 231, 231);
+	display: inline-block;
+margin-top: 28px;
+color: rgb(234, 231, 231);
+}
+.menu1 ul li a{
+background-color: rgb(234, 231, 231);
+text-decoration: none;
+color: rgb(0, 0, 0);
+padding: 5px 20px;
+border: 1px solid transparent;
+transition: 0.6s ease;
+}
+.menu1 ul li a:hover{
+background-color: #fff;
+color: #000;
+}
+.menu1 ul li.active a{
+background-color: #fff;
+color: #000;
+}
+
+.logo img{
+float: left;
+width: 125px;
+height: auto;
+margin-top: -12px;
+margin-left: 20px;
+}
+.main{
+position: fixed;
+width: 100%;
+height: 140px;
+font-weight: bold;
+text-align: center;
+background: rgb(234, 231, 231);
+transition: 0.3s;
+color: rgb(35, 35, 35);
+padding: 20px;
+max-width: 1520px;
+margin: auto;
+z-index: 99;
+}
+.row{
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro{
+  color:black;
+  width:80%;
+margin: auto;
+padding-top: 50px;
+}
+.intro-col{
+  flex-basis: 48%;
+  padding: 30px 2px;
+}
+.intro-col h4{
+  padding-top: 0;
+  font-size: xx-large;
+  font-family:'Times New Roman', Times, serif;
+}
+.intro-col p{
+  text-align: justify;
+  font-family:'Times New Roman', Times, serif;
+  line-height: 40px;
+  padding: 15px 0 25px;
+  padding-top: 2%;
+font-size: 19px;
+
+}
+
+.psystem{
+  color:black;
+width:80%;
+margin: auto;
+padding-top: 120px;
+padding-bottom: 50px;
+
+}
+.ps-col{
+  flex-basis: 48%;
+  padding: 30px 2px;
+}
+.ps-col p{
+  text-align: justify;
+  font-family:'Times New Roman', Times, serif;
+  line-height: 40px;
+  padding: 15px 0 25px;
+  padding-top: 2%;
+font-size: 19px;
+}
+.ps-col img{
+  position: relative; left:10%; top: 15%;
+   width: 100%;
+}
+.ps-col h4{
+  padding-top: 0;
+  font-size: xx-large;
+  font-family:'Times New Roman', Times, serif;
+}
+.meth{
+  color:black;
+width:80%;
+margin: auto;
+padding-top: 190px;
+}
+.meth-col p{
+  text-align: justify;
+  font-family:'Times New Roman', Times, serif;
+  line-height: 40px;
+  padding: 15px 0 25px;
+  padding-top: 2%;
+font-size: 19px;
+}
+.meth-col{
+  flex-basis: 48%;
+  padding: 30px 2px;
+}
+.meth-col img{
+   width: 100%;
+}
+.meth-col h4{
+  padding-top: 0;
+  font-size: xx-large;
+  font-family:'Times New Roman', Times, serif;
+}
+
+.meth-col1{
+  flex-basis: 48%;
+  padding: 30px 0;
+}
+.meth-col1 h3{
+  padding-top: 0;
+  font-size: 23px;
+}
+
+.meth-col1 p{
+  text-align: justify;
+  line-height: 40px;
+  padding: 15px 0 10px;
+  padding-top: 2%;
+font-size: 19px;
+}
+
+.perf{
+  color:black;
+width:80%;
+margin: auto;
+padding-top: -200px;
+padding-bottom: 120px;
+
+}
+.perf-col{
+  flex-basis: 48%;
+  padding: 30px 2px;
+}
+.perf-col img{
+   width: 80%;
+}
+.perf-col h4{
+  padding-top: 0;
+  font-size: xx-large;
+  font-family:'Times New Roman', Times, serif;
+}
+.perf-col p{
+  text-align: justify;
+  font-family:'Times New Roman', Times, serif;
+  line-height: 40px;
+  padding: 15px 0 25px;
+  padding-top: 2%;
+font-size: 19px;
+}
+
+/***Menu 1->2***/
+
+.menu2 ul{
+  text-size-adjust: 50px;
+  position: relative; left: 28%;
+  margin-bottom: -95px;
+list-style-type: none;
+z-index: 0;
+transition: 0.3s;
+color: #8e7e7e;
+}
+.menu2 ul li{
+background-color: #8e7e7e;
+	display: inline-block;
+margin-top: 60px;
+color: #8e7e7e;
+}
+.menu2 ul li a{
+background-color: #8e7e7e;
+text-decoration: none;
+color: rgb(0, 0, 0);
+padding: 5px 20px;
+border: 1px solid transparent;
+transition: 0.6s ease;
+}
+.menu2 h2{
+  font-size: 20px;
+}
+.menu2 ul li a:hover{
+background-color: #fff;
+color: #000;
+}
+
+/**use later
+
+.menu2{
+  text-size-adjust: 50px;
+  position: relative; left: 35%;
+  margin-bottom: -95px;
+list-style-type: none;
+z-index: 0;
+transition: 0.3s;
+}
+.menu2 h2{
+  font-size: 20px;
+}
+.menu2 ul{
+  color: #8e7e7e;
+}
+
+***/
+
+    </style>
+</head>
+<body style="background-color: #c5bdbd;">
+  <header>
+      <div class="main">
+        <div class="logo">
+          <img src="../static/logo1.png">
+        </div>
+        <div class="heading">
+          <h1>
+           VIGNANA BHARATHI INSTITUTE OF TECHNOLOGY
+          </h1>
+		      <h4>(A UGC Autonomous Institution Approved by AICTE, Affiliated to JNTUH,Accredited by NBA & NAAC )<br>
+            Aushapur(v),Ghatkesar(M),Medchal(D) Telangana-501301
+          </h4>
+        </div>
+        <div class="menu1">
+         <ul>
+              <li><a href="{% url 'home' %}">Home</a></li>
+              <li><a href="{% url 'uploadfile' %}">Upload File</a></li>
+              <li><a href="{% url 'about' %}">About</a></li>
+              <li><a href="{% url 'details' %}">Details</a></li>
+         </ul>
+        </div>
+     </div>   
+
+  </header>
+
+
+  <!-- Introduction --> 
+ <section id="intro" class="intro">
+    <div class="intro-col">
+     <h4> <bold>Introduction</bold></h4>
+     <p>Prediction of Soybean Yield  earlier to harvest would help policymakers and farmers in taking proper marketing and storage measures. This project will enable farmers in determining the yield of their crop prior to cultivating the agricultural land, allowing them to make better decisions.Early crop yield prediction encourages the best crop choices and thereby increases food security.Crop yield prediction became difficult due to the interdependence of multiple factors such as crop genotype, environmental factors, management practices, and their interactions, but tdeep learning appears to have great potential in terms of increased accuracy and efficiency.In this research a deep learning framework, CNN is proposed for efficient soybean yield prediction.
+     </p>
+    </div>
+ </section>
+
+  <!-- Proposed System --> 
+ <section id="ps" class="psystem">
+   <div class="row">
+     <div class="ps-col">
+      <h4> <bold>Proposed System</bold></h4>
+      <p>
+        The proposed system is Soybean Yield Prediction using CNN.<br>
+      The major contributions are as follows.<br><br>
+      1. The dataset consists of soil data,weather data,yield performance and management data .<br>
+      2. The features of dataset are processed for dimensionality reduction  <br>
+      3. Classification model is trained to predict the soybean yield. CNN classifier is implemented.
+      </p>
+     </div>
+     <!--center img-->
+     <div class="ps-col">
+       <img src="../static/proposed.jpg" alt="proposed system">
+     </div>
+   </div>
+  </section>
+
+  <!-- Methodology --> 
+ <section id="m" class="meth">
+    <div class="meth-col">
+     <h4> <bold>Methodology</bold></h4>
+     <p>
+      The proposed system is Soybean Yield Prediction using CNN.<br>
+       It consists of six modules: <br>
+       1.Data Collection : In this module data is collected from different sources.<br>
+       2.Data Preprocessing : In this module data is preprocessed to remove unnecessary attributes.<br>
+       3.Model Building : In this module CNN model is built to train and test the data.<br>
+       3.Error caluculation :In this module error rate is calculated using performance metrics such as RMSE value,MSE value,MAE value,R^2 value<br>
+       4.Yield Prediction : In this module average yield of soybean is predicted based on the available data.<br>
+       5.Display Output : In this module the yireld predicted is displayed as a result.<br><br>
+     </p>
+     <!---end
+     <div class="meth-col1">
+      <h3><bold>Convolutional Neural Network (CNN)</bold></h3>
+      <p>• Applying convolution to find different importand features inside the image<br>
+        • Applying pooling to compress the image without losing its features<br>
+        • FLattening it to a 1-dimensional input from a 3D[color images] or 2D [Black and white images] to pass into the model<br>
+        • Fully connected input and hidden layers to play with weights and biases and activation functions and optimizers.
+        </p>
+    </div>
+     <div class="meth-col1">
+       <h3><bold>Deep Autoencoder</bold></h3>
+       <p>
+        • Applying convolution to find different importand features inside the image<br>
+        • Applying pooling to compress the image without losing its features<br>
+        • FLattening it to a 1-dimensional input from a 3D[color images] or 2D [Black and white images] to pass into the model<br>
+        • Fully connected input and hidden layers to play with weights and biases and activation functions and optimizers.<br>
+       </p>
+     </div>
+     <div class="meth-col1">
+      <h3><bold>Variational Autoencoder (VAE)</bold></h3>
+      <p>
+        • Applying convolution to find different importand features inside the image<br>
+        • Applying pooling to compress the image without losing its features<br>
+        • FLattening it to a 1-dimensional input from a 3D[color images] or 2D [Black and white images] to pass into the model<br>
+        • Fully connected input and hidden layers to play with weights and biases and activation functions and optimizers.<br>
+      </p>
+      
+    </div>
+    --->
+    </div>
+</section>
+
+<!-- Performance--> 
+<section id="perf" class="perf">
+  <div class="row">
+    <div class="perf-col">
+     <h4> <bold>Performance</bold></h4>
+     <p>
+      A web application which predicts soybean yield at the earliest based on the available data.The performance is measured based on performance metrics such as RMSE value,MSE value,MAE value and R^2 value.This application predicts the soybean yield with high accuracy and less error rate.
+      <br><br>
+     </p>
+    </div>
+    <!--right side img-->
+    <div class="perf-col">
+      <img src="../static/performance.png" alt="performance">
+    </div>
+  </div>
+</section>
+</body>      
